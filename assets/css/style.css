@@ -4,6 +4,7 @@ body{
     padding:30px;
     font-family:system-ui;
     line-height:1.7;
+    background: radial-gradient(circle at top, #e8f0ff, #fff7f0);
 }
 
 nav{
@@ -23,4 +24,49 @@ pre{
 
 img{
     max-width:100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.artigoCard{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.artigoCard:hover {
+    background-color: #f0f0f0;
+}
+
+.artigoCard-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.artigoCard-text h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.artigoCard-text p {
+    margin: 5px 0 0;
+    color: #666;
 }

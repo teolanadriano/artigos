@@ -9,7 +9,23 @@ title: Início
     {% assign artigos = site.artigos | sort: "date" | reverse %}
     {% for artigo in artigos %}
     <li>
-        <a href="{{ artigo.url | relative_url }}">{{ artigo.title }}</a>
+        <a href="{{ artigo.url | relative_url }}">
+            <div class="artigoCard">
+                {% if artigo.image %}
+                <img class="artigoCard-img" src="{{ artigo.image | relative_url }}"
+                    alt="{{ artigo.title }}"
+                    loading="lazy">
+                {% else %}
+                <img class="artigoCard-img" src="{{ '/assets/images/fff.png' | relative_url }}"
+                    alt="{{ artigo.title }}"
+                    loading="lazy">
+                {% endif %}
+                <div class="artigoCard-text">
+                    <h2>{{ artigo.title }}</h2>
+                    <p>{{ artigo.description }}</p>
+                </div>
+            </div>
+        </a>
     </li>
     {% endfor %}
 </ul>
