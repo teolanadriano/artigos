@@ -1,0 +1,41 @@
+body{
+
+    max-width:900px;
+    margin:auto;
+
+    padding:30px;
+
+    font-family:system-ui;
+
+    line-height:1.7;
+
+}
+
+nav{
+
+    display:flex;
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+article{
+
+    margin-bottom:50px;
+
+}
+
+pre{
+
+    overflow:auto;
+
+    padding:15px;
+
+}
+
+img{
+
+    max-width:100%;
+
+}

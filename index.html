@@ -1,0 +1,26 @@
+---
+layout: default
+title: Início
+---
+
+<h1>Artigos</h1>
+
+<ul>
+
+{% assign artigos = site.artigos | sort: "date" | reverse %}
+
+{% for artigo in artigos %}
+
+<li>
+
+<a href="{{ artigo.url | relative_url }}">
+
+{{ artigo.title }}
+
+</a>
+
+</li>
+
+{% endfor %}
+
+</ul>

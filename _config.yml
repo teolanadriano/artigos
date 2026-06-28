@@ -1,0 +1,41 @@
+title: "Artigos"
+description: "Alguns artigos interessantes."
+
+url: "https://seuusuario.github.io"
+baseurl: "/artigos"
+
+lang: pt-BR
+timezone: America/Fortaleza
+
+author:
+  name: "Teolan Adriano"
+
+markdown: kramdown
+highlighter: rouge
+
+permalink: /:title/
+
+collections:
+  artigos:
+    output: true
+    permalink: /:path/
+
+defaults:
+
+  - scope:
+      path: ""
+      type: artigos
+    values:
+      layout: article
+
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - README.md
