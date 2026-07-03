@@ -1,7 +1,7 @@
 title: "Artigos"
 description: "Alguns artigos interessantes."
 
-url: "https://seuusuario.github.io"
+url: "https://teolanadriano.github.io"
 baseurl: "/artigos"
 
 lang: pt-BR
@@ -39,3 +39,6 @@ plugins:
 
 exclude:
   - README.md
+  - vendor/
+  - .bundle/
+  - .jekyll-cache/
