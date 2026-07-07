@@ -5,7 +5,7 @@ title: Início
 
 <h1>Artigos</h1>
 
-<ul>
+<ul class="listaArtigos">
     {% assign artigos = site.artigos | sort: "date" | reverse %}
     {% for artigo in artigos %}
     <li>
