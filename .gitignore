@@ -6,3 +6,5 @@ _site/
 vendor/bundle/
 .DS_Store
 Thumbs.db
+_config.dev.yml
+serve-local.ps1
