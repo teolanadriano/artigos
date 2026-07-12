@@ -23,6 +23,8 @@ nav{
     padding: 0 20px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
 }
 
 .logo{
@@ -35,7 +37,7 @@ nav{
     border-radius: 50%;
     margin-right: 10px;
 }
-.logo span{
+.logo-title{
     display: flex;
     flex-direction: row;
     color: white;
@@ -43,12 +45,22 @@ nav{
     font-weight: bold;
     align-items: center;
 }
-.logo span div{
+.logo-title span{
+    display: flex;
+    flex-direction: row;
+}
+.logo-title div{
     height: 18px;
     width: 1px;
     background-color: white;
     margin: 0 10px;
 }
+
+.nav-ul-wrapper{
+    display: flex;
+    align-items: center;
+}
+
 nav ul{
     list-style: none;
     display: flex;
@@ -61,6 +73,66 @@ nav ul li a{
 }
 nav ul li a:hover{
     text-decoration: underline;
+}
+
+.collapse-menu{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.collapse-menu span{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+.collapse-menu span:nth-child(1).active{
+    transform: translateY(11px) rotate(45deg);
+    background-color: #007bff;
+}
+
+.collapse-menu span:nth-child(2).active{
+    opacity: 0;
+}
+
+.collapse-menu span:nth-child(3).active{
+    transform: translateY(-11px) rotate(-45deg);
+    background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .logo-title{
+        font-size: 14px;
+    }
+    .logo-title span{
+        font-size: 14px;
+    }
+    .logo-title span div{
+        display: none;
+    }
+
+    .nav-ul-wrapper{
+        display: none; 
+        border-radius: 25px;  
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    nav ul{
+        gap: 5px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .collapse-menu{
+        display: flex;
+    }
 }
 
 article{
@@ -95,6 +167,21 @@ article p{
 .artigoHead--mais-p{
     margin: 0;
     font-size: 14px;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+    body{
+        padding: 0 15px;
+    }
+    article{
+        width: 100%;
+    }
+    .artigoHead h1 {
+        font-size: 32px;
+    }
+    .artigoHead h2 {
+        font-size: 18px;
+    }
 }
 
 pre{

@@ -1,13 +1,23 @@
 <nav>
     <div class="logo">
         <img src="{{ '/assets/images/fff.png' | relative_url }}" alt="Logo">
-        <span>TEOLAN ADRIANO <div></div> ARTIGOS</span>
+        <div class="logo-title">
+            <span>TEOLAN ADRIANO </span> <div></div> <span> ARTIGOS</span>
+        </div>
     </div>
-    <ul>
-        <li><a href="{{ '/' | relative_url }}">Início</a></li>
-        <li><a href="{{ '/sobre.html' | relative_url }}">Sobre</a></li>
-        <li><a href="{{ '/contato.html' | relative_url }}">Contato</a></li>
-    </ul>
+
+    <div class="nav-ul-wrapper">
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Início</a></li>
+            <li><a href="{{ '/sobre.html' | relative_url }}">Sobre</a></li>
+            <li><a href="{{ '/contato.html' | relative_url }}">Contato</a></li>
+        </ul>
+    </div>
+    <div class="collapse-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </nav>
 </nav>
 <hr>
